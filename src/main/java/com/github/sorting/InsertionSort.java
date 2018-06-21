@@ -12,26 +12,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting.shehanperera.algo;
+package com.github.sorting;
 
 import com.codahale.metrics.Timer;
 
-public class BubbleSort {
+public class InsertionSort {
 
     private Timer.Context context;
 
-    public int[] bubbleSort(int list[]) {
+    public int[] interstionsort(int list[]) {
 
-        context = MetricsServer.getInstance().getBubbleSortTime().time();
-        int n = list.length;
-        for (int i = 0; i < n - 1; i++)
-            for (int j = 0; j < n - i - 1; j++)
-                if (list[j] > list[j + 1]) {
-                    int temp = list[j];
-                    list[j] = list[j + 1];
-                    list[j + 1] = temp;
-                }
+        context = MetricsServer.getInstance().getInsertionSortTime().time();
+        int size = list.length;
+        for (int i = 1; i < size; i++) {
+            int key = list[i];
+            int j = i - 1;
+
+            while (j >= 0 && list[j] > key) {
+                list[j + 1] = list[j];
+                j = j - 1;
+            }
+            list[j + 1] = key;
+        }
         context.stop();
         return list;
+
     }
 }

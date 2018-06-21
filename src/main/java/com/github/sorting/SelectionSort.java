@@ -12,30 +12,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting.shehanperera.algo;
+package com.github.sorting;
 
 import com.codahale.metrics.Timer;
 
-public class InsertionSort {
+public class SelectionSort {
 
     private Timer.Context context;
 
-    public int[] interstionsort(int list[]) {
+    public int[] selectionsort(int list[]) {
 
-        context = MetricsServer.getInstance().getInsertionSortTime().time();
+        context = MetricsServer.getInstance().getSelectionSortTime().time();
         int size = list.length;
-        for (int i = 1; i < size; i++) {
-            int key = list[i];
-            int j = i - 1;
+        for (int i = 0; i < size - 1; i++) {
+            int min_idx = i;
+            for (int j = i + 1; j < size; j++)
+                if (list[j] < list[min_idx])
+                    min_idx = j;
 
-            while (j >= 0 && list[j] > key) {
-                list[j + 1] = list[j];
-                j = j - 1;
-            }
-            list[j + 1] = key;
+            int temp = list[min_idx];
+            list[min_idx] = list[i];
+            list[i] = temp;
         }
         context.stop();
         return list;
-
     }
+
 }
