@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting.src.main.java.com.github.shehanperera.algo;
+package com.github.sorting.shehanperera.algo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
