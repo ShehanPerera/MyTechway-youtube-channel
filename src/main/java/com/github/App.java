@@ -1,15 +1,13 @@
 package com.github;
 
-
-
-import com.github.sorting.src.main.java.com.github.shehanperera.algo.*;
+import com.github.sorting.*;
 
 import java.util.Arrays;
 
 /**
  * Hello world!
  */
-public class App {
+public class ExampleRun {
     public static void main(String[] args) {
         MetricsServer.getInstance().startReport();
 
