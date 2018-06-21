@@ -24,7 +24,7 @@
                                     <manifestEntries>
                                         <addClasspath>true</addClasspath>
                                         <classpathPrefix>lib/</classpathPrefix>
-                                        <Main-Class>com.github.App</Main-Class>
+                                        <Main-Class>com.github.ExampleRun</Main-Class>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
