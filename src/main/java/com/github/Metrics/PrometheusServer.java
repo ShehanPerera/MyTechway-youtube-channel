@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting;
+package com.github.Metrics;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
@@ -27,7 +27,6 @@ import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.exporter.common.TextFormat;
 
 import java.io.OutputStreamWriter;
-import java.nio.channels.Channel;
 
 /**
  * Created by rayt on 10/8/16. And modify for use in netty-echo-server
@@ -38,7 +37,7 @@ public class PrometheusServer {
     private final int port;
     private final EventLoopGroup bossGroup;
     private final EventLoopGroup workerGroup;
-    private Channel channel;
+    private io.netty.channel.Channel channel;
 
     public PrometheusServer(CollectorRegistry registry, int port) {
 
@@ -63,8 +62,8 @@ public class PrometheusServer {
                         pipeline.addLast("encoder", new HttpResponseEncoder());
                         pipeline.addLast("prometheus", new SimpleChannelInboundHandler<Object>() {
                             @Override
-                            protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o)
-                                    throws Exception {
+                            protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
+
                                 if (!(o instanceof HttpRequest)) {
                                     return;
                                 }
@@ -72,10 +71,8 @@ public class PrometheusServer {
                                 HttpRequest request = (HttpRequest) o;
 
                                 if (!HttpMethod.GET.equals(request.method())) {
-                                    final FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
-                                            HttpResponseStatus.NOT_ACCEPTABLE);
-                                    channelHandlerContext.writeAndFlush(response).
-                                            addListener(ChannelFutureListener.CLOSE);
+                                    final FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.NOT_ACCEPTABLE);
+                                    channelHandlerContext.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
                                     return;
                                 }
 
@@ -86,8 +83,7 @@ public class PrometheusServer {
                                 writer.close();
                                 os.close();
 
-                                final FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
-                                        HttpResponseStatus.OK, buf);
+                                final FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, buf);
                                 response.headers().set(HttpHeaderNames.CONTENT_TYPE, TextFormat.CONTENT_TYPE_004);
                                 channelHandlerContext.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
                             }
@@ -97,7 +93,7 @@ public class PrometheusServer {
                 });
 
         try {
-            this.channel = (Channel) bootstrap.bind(this.port).sync().channel();
+            this.channel = bootstrap.bind(this.port).sync().channel();
         } catch (InterruptedException e) {
             // do nothing
         }

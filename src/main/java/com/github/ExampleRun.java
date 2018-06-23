@@ -1,5 +1,6 @@
 package com.github;
 
+import com.github.Metrics.MetricsServer;
 import com.github.sorting.*;
 
 import java.util.Arrays;
@@ -12,7 +13,6 @@ public class ExampleRun {
         MetricsServer.getInstance().startReport();
 
         System.out.println("Hello algo!!");
-
 
         int elementsList[] = new int[100];
         for (int i = 0; i < 100; i++) {

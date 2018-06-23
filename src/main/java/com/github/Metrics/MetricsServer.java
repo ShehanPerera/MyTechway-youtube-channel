@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting;
+package com.github.Metrics;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
-
-import java.util.concurrent.TimeUnit;
+import io.prometheus.client.CollectorRegistry;
+import io.prometheus.client.dropwizard.DropwizardExports;
 
 public class MetricsServer {
 
@@ -88,12 +88,17 @@ public class MetricsServer {
         * This for Console reporter
         * Period apply to 2 for make easy view of output
         */
-        System.out.println("Timers");
-        ConsoleReporter = ConsoleReporter.forRegistry(metricRegistry)
-                .convertRatesTo(TimeUnit.SECONDS)
-                .convertDurationsTo(TimeUnit.MILLISECONDS)
-                .build();
-        ConsoleReporter.start(1, TimeUnit.SECONDS);
+        CollectorRegistry.defaultRegistry.register(new DropwizardExports(metricRegistry));
+
+        // Expose Prometheus metrics.
+        PrometheusServer prometheusServer = new PrometheusServer(CollectorRegistry.defaultRegistry, 9092);
+        prometheusServer.start();
+//        System.out.println("Timers");
+//        ConsoleReporter = ConsoleReporter.forRegistry(metricRegistry)
+//                .convertRatesTo(TimeUnit.SECONDS)
+//                .convertDurationsTo(TimeUnit.MILLISECONDS)
+//                .build();
+//        ConsoleReporter.start(1, TimeUnit.SECONDS);
     }
 
 }
