@@ -1,7 +1,7 @@
 package com.github;
 
 import com.github.Metrics.MetricsServer;
-import com.github.sorting.*;
+import com.github.Sorting.*;
 
 import java.util.Arrays;
 
