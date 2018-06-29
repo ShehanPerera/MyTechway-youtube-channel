@@ -15,7 +15,11 @@
 package com.github.sorting;
 
 import com.codahale.metrics.Timer;
+import com.github.metrics.MetricsServer;
 
+/**
+ * This class using for sort an array using Insertion sort
+ */
 public class InsertionSort {
 
     private Timer.Context context;

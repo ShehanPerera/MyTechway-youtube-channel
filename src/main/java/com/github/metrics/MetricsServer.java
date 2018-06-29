@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.sorting;
+package com.github.metrics;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
-
-import java.util.concurrent.TimeUnit;
+import io.prometheus.client.CollectorRegistry;
+import io.prometheus.client.dropwizard.DropwizardExports;
 
 public class MetricsServer {
 
@@ -31,6 +31,8 @@ public class MetricsServer {
     private Timer radixSortTime;
     private Timer selectionSortTime;
     private Timer mergeSortTime;
+    private Timer stackPushTime;
+    private Timer stackPopTime;
 
     private ConsoleReporter ConsoleReporter;
 
@@ -43,6 +45,8 @@ public class MetricsServer {
         radixSortTime = this.metricRegistry.timer("Time for Radix Sort");
         selectionSortTime = this.metricRegistry.timer("Time for Selection Sort");
         mergeSortTime = this.metricRegistry.timer("Time for Merge Sort");
+        stackPushTime = this.metricRegistry.timer("Timer for Stack push");
+        stackPopTime = this.metricRegistry.timer("Timer for Stack pop");
 
     }
 
@@ -58,29 +62,45 @@ public class MetricsServer {
 
         return bubbleSortTime;
     }
+
     public Timer getHeapSortTime() {
 
         return heapSortTime;
     }
+
     public Timer getInsertionSortTime() {
 
         return insertionSortTime;
     }
+
     public Timer getQuickSortTime() {
 
         return quickSortTime;
     }
+
     public Timer getRadixSortTime() {
 
         return radixSortTime;
     }
+
     public Timer getSelectionSortTime() {
 
         return selectionSortTime;
     }
+
     public Timer getMergeSortTime() {
 
         return mergeSortTime;
+    }
+
+    public Timer getStackPushTime() {
+
+        return stackPushTime;
+    }
+
+    public Timer getStackPopTime() {
+
+        return stackPopTime;
     }
 
     public void startReport() {
@@ -88,12 +108,17 @@ public class MetricsServer {
         * This for Console reporter
         * Period apply to 2 for make easy view of output
         */
-        System.out.println("Timers");
-        ConsoleReporter = ConsoleReporter.forRegistry(metricRegistry)
-                .convertRatesTo(TimeUnit.SECONDS)
-                .convertDurationsTo(TimeUnit.MILLISECONDS)
-                .build();
-        ConsoleReporter.start(1, TimeUnit.SECONDS);
+        CollectorRegistry.defaultRegistry.register(new DropwizardExports(metricRegistry));
+
+        // Expose Prometheus metrics.
+        PrometheusServer prometheusServer = new PrometheusServer(CollectorRegistry.defaultRegistry, 9092);
+        prometheusServer.start();
+//        System.out.println("Timers");
+//        ConsoleReporter = ConsoleReporter.forRegistry(metricRegistry)
+//                .convertRatesTo(TimeUnit.SECONDS)
+//                .convertDurationsTo(TimeUnit.MILLISECONDS)
+//                .build();
+//        ConsoleReporter.start(1, TimeUnit.SECONDS);
     }
 
 }

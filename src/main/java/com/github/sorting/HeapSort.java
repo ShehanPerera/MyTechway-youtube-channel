@@ -15,6 +15,7 @@
 package com.github.sorting;
 
 import com.codahale.metrics.Timer;
+import com.github.metrics.MetricsServer;
 
 public class HeapSort {
 
