@@ -4,6 +4,14 @@ public class BinarySearch {
 
     public boolean found = false;
 
+    /**
+     * A recursive binary search function. It returns found massage
+     of x in given array arr[l..r] is present,
+     otherwise returns not found massage
+     * @param list data set for search
+     * @param element  is search element
+     * @return found or not found massage
+     */
     public String BinarySearch(int list[], int element) {
 
         String result;
@@ -19,6 +27,14 @@ public class BinarySearch {
 
     }
 
+    /**
+     *Returns index of x if it is present in arr[l..r] true , else return false
+     * @param list data set for search
+     * @param l location for first element in array
+     * @param n length for array
+     * @param element is search element
+     * @return true or false massage
+     */
     public boolean BinarySearching(int list[], int l, int n, int element) {
 
         int x = element;

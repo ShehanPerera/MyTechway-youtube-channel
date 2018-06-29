@@ -1,11 +1,23 @@
 package com.github.Searching;
 
 public class FibonacciSearch
-{   
-    // Utility function to find minimum 
-    // of two elements
+{
+    /**
+     * Utlity function to find minimum
+     of two elements
+     */
+
     public static int min(int x, int y) 
     { return (x <= y)? x : y; }
+
+    /**
+     *A recursive FibonacciSearch function. It returns found massage
+     of x in given array arr[l..r] is present,
+     otherwise returns not found massage
+     * @param list data set for search
+     * @param element is search element
+     * @return found or not found massage
+     */
   public String FibonacciSearch(int list[],int element)
     {
        
@@ -21,6 +33,14 @@ public class FibonacciSearch
         return result;
 
     }
+
+    /**
+     *Returns index of x if present is true, else returns false
+     * @param list  data set for search
+     * @param n length for array
+     * @param x is search element
+     * @return true or false
+     */
     public boolean FibonacciSearching(int list[], 
                                          int n, int x)
     {
