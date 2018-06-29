@@ -17,6 +17,9 @@ package com.github.sorting;
 import com.codahale.metrics.Timer;
 import com.github.metrics.MetricsServer;
 
+/**
+ * This is class for sort a array using Bubble sort method
+ */
 public class BubbleSort {
 
     private Timer.Context context;
