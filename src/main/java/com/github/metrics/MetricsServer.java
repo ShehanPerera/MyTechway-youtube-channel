@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.Metrics;
+package com.github.metrics;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
@@ -31,6 +31,8 @@ public class MetricsServer {
     private Timer radixSortTime;
     private Timer selectionSortTime;
     private Timer mergeSortTime;
+    private Timer stackPushTime;
+    private Timer stackPopTime;
 
     private ConsoleReporter ConsoleReporter;
 
@@ -43,6 +45,8 @@ public class MetricsServer {
         radixSortTime = this.metricRegistry.timer("Time for Radix Sort");
         selectionSortTime = this.metricRegistry.timer("Time for Selection Sort");
         mergeSortTime = this.metricRegistry.timer("Time for Merge Sort");
+        stackPushTime = this.metricRegistry.timer("Timer for Stack push");
+        stackPopTime = this.metricRegistry.timer("Timer for Stack pop");
 
     }
 
@@ -58,29 +62,45 @@ public class MetricsServer {
 
         return bubbleSortTime;
     }
+
     public Timer getHeapSortTime() {
 
         return heapSortTime;
     }
+
     public Timer getInsertionSortTime() {
 
         return insertionSortTime;
     }
+
     public Timer getQuickSortTime() {
 
         return quickSortTime;
     }
+
     public Timer getRadixSortTime() {
 
         return radixSortTime;
     }
+
     public Timer getSelectionSortTime() {
 
         return selectionSortTime;
     }
+
     public Timer getMergeSortTime() {
 
         return mergeSortTime;
+    }
+
+    public Timer getStackPushTime() {
+
+        return stackPushTime;
+    }
+
+    public Timer getStackPopTime() {
+
+        return stackPopTime;
     }
 
     public void startReport() {
