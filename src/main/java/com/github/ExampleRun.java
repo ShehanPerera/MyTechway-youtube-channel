@@ -1,5 +1,6 @@
 package com.github;
 
+import com.github.datastructures.Stack;
 import com.github.metrics.MetricsServer;
 import com.github.sorting.*;
 
@@ -38,6 +39,14 @@ public class ExampleRun {
 
         SelectionSort selectionSort = new SelectionSort();
         elementsList = selectionSort.selectionsort(elementsList);
+
+        Stack stack = new Stack(100);
+        for (int i = 0; i < 100; i++) {
+            stack.push(i);
+        }
+        for (int i = 0; i < 100; i++) {
+            stack.pop();
+        }
 
         System.out.println(Arrays.toString(elementsList));
         ExampleRun exampleRun = new ExampleRun();
