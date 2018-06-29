@@ -17,6 +17,9 @@ package com.github.sorting;
 import com.codahale.metrics.Timer;
 import com.github.metrics.MetricsServer;
 
+/**
+ * This class used for sort an array using Selection sort method
+ */
 public class SelectionSort {
 
     private Timer.Context context;
