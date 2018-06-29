@@ -1,4 +1,4 @@
-package com.github.dataStructures;
+package com.github.datastructures;
 
 import java.util.*;
 
