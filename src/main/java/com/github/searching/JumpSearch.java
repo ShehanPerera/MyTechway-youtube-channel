@@ -1,33 +1,40 @@
 package com.github.searching;
 
+import com.codahale.metrics.Timer;
+import com.github.metrics.MetricsServer;
+
 public class JumpSearch {
+    private Timer.Context context;
+
     /**
      * A recursive JumpSearch function. It returns found massage
-     of element in given array arr[l..r] is present,
-     otherwise returns not found massage
-     * @param list  data set for search
+     * of element in given array arr[l..r] is present,
+     * otherwise returns not found massage
+     *
+     * @param list    data set for search
      * @param element is search element
      * @return found or not found massage
      */
     public String JumpSearch(int list[], int element) {
 
+        context = MetricsServer.getInstance().getJumpSearchTime().time();
         String result;
-
-        int n = list.length;
         boolean found = jumpSearching(list, element);
         if (found) {
             result = "Found";
         } else {
             result = "Not Found";
         }
+        context.stop();
         return result;
 
     }
 
     /**
-     *If x is present in arr[0..n-1], then returns
-     true of it, else returns false.
-     * @param list data set for search
+     * If x is present in arr[0..n-1], then returns
+     * true of it, else returns false.
+     *
+     * @param list    data set for search
      * @param element is search element
      * @return true or false
      */
@@ -40,7 +47,7 @@ public class JumpSearch {
         int step = (int) Math.floor(Math.sqrt(n));
         /**
          * Finding the block where element is
-          present (if it is present)
+         present (if it is present)
          */
         int prev = 0;
         while (list[Math.min(step, n) - 1] < element) {
