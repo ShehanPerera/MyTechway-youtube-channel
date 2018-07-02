@@ -14,7 +14,6 @@
  */
 package com.github.metrics;
 
-import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
 import io.prometheus.client.CollectorRegistry;
@@ -37,8 +36,9 @@ public class MetricsServer {
     private Timer interpolationSearchTime;
     private Timer jumpSearchTime;
     private Timer linearSearchTime;
-
-    private ConsoleReporter ConsoleReporter;
+    private Timer enqueueTime;
+    private Timer dequeueTime;
+    //private ConsoleReporter ConsoleReporter;
 
     private MetricsServer() {
 
@@ -55,6 +55,9 @@ public class MetricsServer {
         mergeSortTime = this.metricRegistry.timer("Time for Merge Sort");
         stackPushTime = this.metricRegistry.timer("Timer for Stack push");
         stackPopTime = this.metricRegistry.timer("Timer for Stack pop");
+        enqueueTime = this.metricRegistry.timer("Timer for enqueue");
+        dequeueTime = this.metricRegistry.timer("Timer for dequeue");
+
 
     }
 
@@ -112,10 +115,12 @@ public class MetricsServer {
     }
 
     public Timer getBinarySearchTime() {
+
         return binarySearchTime;
     }
 
     public Timer getInterpolationSearchTime() {
+
         return interpolationSearchTime;
     }
 
@@ -124,7 +129,18 @@ public class MetricsServer {
     }
 
     public Timer getLinearSearchTime() {
+
         return linearSearchTime;
+    }
+
+    public Timer getEnqueueTime() {
+
+        return enqueueTime;
+    }
+
+    public Timer getDequeueTime() {
+
+        return dequeueTime;
     }
 
     public void startReport() {
