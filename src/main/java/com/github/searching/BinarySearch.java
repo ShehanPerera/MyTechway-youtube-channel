@@ -1,7 +1,11 @@
 package com.github.searching;
 
+import com.codahale.metrics.Timer;
+import com.github.metrics.MetricsServer;
+
 public class BinarySearch {
 
+    private Timer.Context context;
     private boolean found = false;
 
     /**
@@ -15,6 +19,7 @@ public class BinarySearch {
      */
     public String BinarySearch(int list[], int element) {
 
+        context = MetricsServer.getInstance().getBinarySearchTime().time();
         String result;
         int n = list.length;
         boolean found = BinarySearching(list, 0, n - 1, element);
@@ -23,6 +28,7 @@ public class BinarySearch {
         } else {
             result = "Not Found";
         }
+        context.stop();
         return result;
 
     }
