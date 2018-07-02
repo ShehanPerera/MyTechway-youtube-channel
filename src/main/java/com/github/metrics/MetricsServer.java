@@ -33,11 +33,19 @@ public class MetricsServer {
     private Timer mergeSortTime;
     private Timer stackPushTime;
     private Timer stackPopTime;
+    private Timer binarySearchTime;
+    private Timer interpolationSearchTime;
+    private Timer jumpSearchTime;
+    private Timer linearSearchTime;
 
     private ConsoleReporter ConsoleReporter;
 
     private MetricsServer() {
 
+        binarySearchTime = this.metricRegistry.timer("Time for Binary Search");
+        interpolationSearchTime = this.metricRegistry.timer("Time for Interpolation Search");
+        jumpSearchTime = this.metricRegistry.timer("Time for Jump Search");
+        linearSearchTime = this.metricRegistry.timer("Time for Linear Search");
         bubbleSortTime = this.metricRegistry.timer("Time for Bubble Sort");
         heapSortTime = this.metricRegistry.timer("Time for Heap Sort");
         insertionSortTime = this.metricRegistry.timer("Time for Insertion Sort ");
@@ -103,16 +111,33 @@ public class MetricsServer {
         return stackPopTime;
     }
 
+    public Timer getBinarySearchTime() {
+        return binarySearchTime;
+    }
+
+    public Timer getInterpolationSearchTime() {
+        return interpolationSearchTime;
+    }
+
+    public Timer getJumpSearchTime() {
+        return jumpSearchTime;
+    }
+
+    public Timer getLinearSearchTime() {
+        return linearSearchTime;
+    }
+
     public void startReport() {
-        /*
-        * This for Console reporter
-        * Period apply to 2 for make easy view of output
-        */
+
         CollectorRegistry.defaultRegistry.register(new DropwizardExports(metricRegistry));
 
         // Expose Prometheus metrics.
         PrometheusServer prometheusServer = new PrometheusServer(CollectorRegistry.defaultRegistry, 9092);
         prometheusServer.start();
+         /*
+        * This for Console reporter
+        * Period apply to 2 for make easy view of output
+        */
 //        System.out.println("Timers");
 //        ConsoleReporter = ConsoleReporter.forRegistry(metricRegistry)
 //                .convertRatesTo(TimeUnit.SECONDS)
