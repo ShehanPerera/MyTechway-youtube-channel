@@ -1,4 +1,4 @@
-package com.github.Searching;
+package com.github.searching;
 
 public class LinearSearch {
 
