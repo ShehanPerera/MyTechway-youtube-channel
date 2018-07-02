@@ -1,8 +1,12 @@
 package com.github;
 
+import com.github.datastructures.Queue;
 import com.github.datastructures.Stack;
 import com.github.metrics.MetricsServer;
-import com.github.searching.*;
+import com.github.searching.BinarySearch;
+import com.github.searching.InterpolationSearch;
+import com.github.searching.JumpSearch;
+import com.github.searching.LinearSearch;
 import com.github.sorting.*;
 
 import java.util.Arrays;
@@ -20,6 +24,7 @@ public class ExampleRun {
         for (int i = 0; i < 100; i++) {
             elementsList[i] = 100 - i;
         }
+        /** Running Sorting algorithms */
         BubbleSort bubbleSort = new BubbleSort();
         elementsList = bubbleSort.bubbleSort(elementsList);
 
@@ -41,6 +46,10 @@ public class ExampleRun {
         SelectionSort selectionSort = new SelectionSort();
         elementsList = selectionSort.selectionsort(elementsList);
 
+        /** End of Sorting algorithms */
+
+        /** Start of Data structures */
+
         Stack stack = new Stack(100);
         for (int i = 0; i < 100; i++) {
             stack.push(i);
@@ -49,6 +58,13 @@ public class ExampleRun {
             stack.pop();
         }
 
+        Queue queue = new Queue(100);
+        for (int i = 0; i < 100; i++) {
+            queue.enqueue(i);
+        }
+        for (int i = 0; i < 100; i++) {
+            queue.dequeue();
+        }
         /**Searching algorithms */
 
         BinarySearch binarySearch = new BinarySearch();
@@ -64,6 +80,7 @@ public class ExampleRun {
         LinearSearch linearSearch = new LinearSearch();
         System.out.println("Linear Search result for 50 : " + linearSearch.LinearSearch(elementsList, 50));
 
+        /** End of Searching algorithms */
 
         System.out.println(Arrays.toString(elementsList));
         ExampleRun exampleRun = new ExampleRun();
