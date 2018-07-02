@@ -1,36 +1,44 @@
 package com.github.searching;
 
+import com.codahale.metrics.Timer;
+import com.github.metrics.MetricsServer;
+
 public class InterpolationSearch {
+    private Timer.Context context;
+
     /**
      * A recursive InterpolationSearch function. It returns found massage
-     of x in given array arr[l..r] is present,
-     otherwise returns not found massage
-     * @param list data set for search
+     * of x in given array arr[l..r] is present,
+     * otherwise returns not found massage
+     *
+     * @param list    data set for search
      * @param element is search element
      * @return found or not found massage
      */
     public String InterpolationSearch(int list[], int element) {
 
+        context = MetricsServer.getInstance().getInterpolationSearchTime().time();
         String result;
-
         boolean found = InterpolationSearching(list, element);
         if (found) {
             result = "Found";
         } else {
             result = "Not Found";
         }
+        context.stop();
         return result;
 
     }
 
     /**
      * If x is present in arr[0..n-1], then returns
-      true of it, else returns false.
-     The idea of formula is to return higher value of pos
-     when element to be searched is closer to list[hi]. And
-     maller value when closer to list[lo]
-     * @param list  data set for search
-     * @param x is search element
+     * true of it, else returns false.
+     * The idea of formula is to return higher value of pos
+     * when element to be searched is closer to list[hi]. And
+     * maller value when closer to list[lo]
+     *
+     * @param list data set for search
+     * @param x    is search element
      * @return true or false
      */
     private boolean InterpolationSearching(int list[], int x) {
