@@ -2,6 +2,7 @@ package com.github;
 
 import com.github.datastructures.Stack;
 import com.github.metrics.MetricsServer;
+import com.github.searching.*;
 import com.github.sorting.*;
 
 import java.util.Arrays;
@@ -47,6 +48,22 @@ public class ExampleRun {
         for (int i = 0; i < 100; i++) {
             stack.pop();
         }
+
+        /**Searching algorithms */
+
+        BinarySearch binarySearch = new BinarySearch();
+        System.out.println("Binary Search result for 70 : " + binarySearch.BinarySearch(elementsList, 70));
+
+        InterpolationSearch interpolationSearch = new InterpolationSearch();
+        System.out.println("Interpolation Search result for 80 : " + interpolationSearch.InterpolationSearch
+                (elementsList, 80));
+
+        JumpSearch jumpSearch = new JumpSearch();
+        System.out.println("Jump Search result for -10 : " + jumpSearch.JumpSearch(elementsList, -10));
+
+        LinearSearch linearSearch = new LinearSearch();
+        System.out.println("Linear Search result for 50 : " + linearSearch.LinearSearch(elementsList, 50));
+
 
         System.out.println(Arrays.toString(elementsList));
         ExampleRun exampleRun = new ExampleRun();
