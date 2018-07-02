@@ -1,4 +1,4 @@
-package com.github.Searching;
+package com.github.searching;
 
 public class InterpolationSearch {
     /**
@@ -13,9 +13,8 @@ public class InterpolationSearch {
 
         String result;
 
-        int n = list.length;
-        boolean found2 = InterpolationSearching(list, element);
-        if (found2) {
+        boolean found = InterpolationSearching(list, element);
+        if (found) {
             result = "Found";
         } else {
             result = "Not Found";
@@ -34,14 +33,14 @@ public class InterpolationSearch {
      * @param x is search element
      * @return true or false
      */
-    public boolean InterpolationSearching(int list[], int x) {
+    private boolean InterpolationSearching(int list[], int x) {
         boolean found = false;
-        int lo = 0, hi = (list.length - 1);
+        int low = 0, high = (list.length - 1);
 
-        while (lo <= hi && x >= list[lo] && x <= list[hi]) {
+        while (low <= high && x >= list[low] && x <= list[high]) {
 
-            int pos = lo + (((hi - lo) /
-                    (list[hi] - list[lo])) * (x - list[lo]));
+            int pos = low + (((high - low) /
+                    (list[high] - list[low])) * (x - list[low]));
 
             if (list[pos] == x) {
                 found = true;
@@ -49,9 +48,9 @@ public class InterpolationSearch {
             }
 
             if (list[pos] < x) {
-                lo = pos + 1;
+                low = pos + 1;
             } else {
-                hi = pos - 1;
+                high = pos - 1;
             }
             return found;
         }
