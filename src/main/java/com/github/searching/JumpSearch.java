@@ -1,4 +1,4 @@
-package com.github.Searching;
+package com.github.searching;
 
 public class JumpSearch {
     /**
@@ -9,13 +9,13 @@ public class JumpSearch {
      * @param element is search element
      * @return found or not found massage
      */
-    public String jumpSearch(int list[], int element) {
+    public String JumpSearch(int list[], int element) {
 
         String result;
 
         int n = list.length;
-        boolean found2 = jumpSearching(list, element);
-        if (found2) {
+        boolean found = jumpSearching(list, element);
+        if (found) {
             result = "Found";
         } else {
             result = "Not Found";
@@ -31,7 +31,7 @@ public class JumpSearch {
      * @param element is search element
      * @return true or false
      */
-    public boolean jumpSearching(int list[], int element) {
+    private boolean jumpSearching(int list[], int element) {
         boolean found = false;
         int n = list.length;
         /**
