@@ -1,4 +1,4 @@
-package com.github.Searching;
+package com.github.searching;
 
 public class FibonacciSearch
 {
@@ -7,7 +7,7 @@ public class FibonacciSearch
      of two elements
      */
 
-    public static int min(int x, int y) 
+    private static int min(int x, int y)
     { return (x <= y)? x : y; }
 
     /**
@@ -18,7 +18,7 @@ public class FibonacciSearch
      * @param element is search element
      * @return found or not found massage
      */
-  public String FibonacciSearch(int list[],int element)
+  public String fibonacciSearch(int list[],int element)
     {
        
         String result;
@@ -41,7 +41,7 @@ public class FibonacciSearch
      * @param x is search element
      * @return true or false
      */
-    public boolean FibonacciSearching(int list[], 
+    private boolean FibonacciSearching(int list[],
                                          int n, int x)
     {
 		boolean found=false;
