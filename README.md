@@ -1,5 +1,9 @@
 # Algo
-This is lib for sorting, seraching algorithmes with timer to check their performances.
+
+<img src="https://user-images.githubusercontent.com/29086284/41807005-c180c8fe-76e5-11e8-8ff8-427db50304e9.png" width="300px"/>
+
+
+This is lib for sorting, seraching algorithmes with timer to check their performances.Using this lib we can use sorting methods and searching methods in any other programs you creating.
 
 # How to use Algo 
 
@@ -21,8 +25,6 @@ This is lib for sorting, seraching algorithmes with timer to check their perform
 
 5.Use Grafana for visualize metrics as follows 
 
-
-<img src="https://user-images.githubusercontent.com/29086284/41807005-c180c8fe-76e5-11e8-8ff8-427db50304e9.png" width="300px"/>
 
 <b> Metrics of Sorting algorithms </b>
 <img src="https://user-images.githubusercontent.com/29086284/42161616-361c63f0-7e19-11e8-8248-b3446d9ee2da.png">
