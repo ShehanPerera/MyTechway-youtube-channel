@@ -1,0 +1,142 @@
+<?xml version='1.0' ?>
+<frames>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/1.png</property>
+			<property type='xpos'>-61</property>
+			<property type='ypos'>-288</property>
+			<property type='width'>950</property>
+			<property type='height'>671.65</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>95</property>
+			<property type='yscale'>95</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>16</property>
+			<property type='xpos'>86</property>
+			<property type='ypos'>320</property>
+			<property type='width'>146.25</property>
+			<property type='height'>231.95</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>290</property>
+			<property type='yscale'>290</property>
+		</object>
+		<object type='bubble' name='bubble_oval' sort='lib'>
+			<property type='framenumber'>1</property>
+			<property type='xpos'>510</property>
+			<property type='ypos'>227</property>
+			<property type='width'>146.25</property>
+			<property type='height'>124</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>100</property>
+			<property type='yscale'>100</property>
+			<property type='text'><![CDATA[]]></property>
+			<property type='font'>Arial Unicode MS</property>
+			<property type='color'>undefined</property>
+			<property type='bold'>false</property>
+			<property type='italic'>false</property>
+			<property type='underline'>false</property>
+			<property type='size'>14</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/1.png</property>
+			<property type='xpos'>-61</property>
+			<property type='ypos'>-288</property>
+			<property type='width'>950</property>
+			<property type='height'>671.65</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>95</property>
+			<property type='yscale'>95</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>16</property>
+			<property type='xpos'>166</property>
+			<property type='ypos'>329</property>
+			<property type='width'>146.25</property>
+			<property type='height'>231.95</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>290</property>
+			<property type='yscale'>290</property>
+		</object>
+		<object type='bubble' name='bubble_rec' sort='lib'>
+			<property type='framenumber'>9</property>
+			<property type='xpos'>301</property>
+			<property type='ypos'>214</property>
+			<property type='width'>180.2</property>
+			<property type='height'>111.6</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>90</property>
+			<property type='yscale'>90</property>
+			<property type='text'><![CDATA[]]></property>
+			<property type='font'>Arial Unicode MS</property>
+			<property type='color'>undefined</property>
+			<property type='bold'>false</property>
+			<property type='italic'>false</property>
+			<property type='underline'>false</property>
+			<property type='size'>14</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/1.png</property>
+			<property type='xpos'>-61</property>
+			<property type='ypos'>-288</property>
+			<property type='width'>950</property>
+			<property type='height'>671.65</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>95</property>
+			<property type='yscale'>95</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>16</property>
+			<property type='xpos'>240</property>
+			<property type='ypos'>320</property>
+			<property type='width'>146.25</property>
+			<property type='height'>231.95</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>290</property>
+			<property type='yscale'>290</property>
+		</object>
+		<object type='bubble' name='bubble_oval' sort='lib'>
+			<property type='framenumber'>4</property>
+			<property type='xpos'>559</property>
+			<property type='ypos'>215</property>
+			<property type='width'>198.75</property>
+			<property type='height'>124</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>100</property>
+			<property type='yscale'>100</property>
+			<property type='text'><![CDATA[ Just google.]]></property>
+			<property type='font'>Arial Unicode MS</property>
+			<property type='color'>undefined</property>
+			<property type='bold'>false</property>
+			<property type='italic'>false</property>
+			<property type='underline'>false</property>
+			<property type='size'>14</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/1.png</property>
+			<property type='xpos'>-61</property>
+			<property type='ypos'>-288</property>
+			<property type='width'>950</property>
+			<property type='height'>671.65</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>95</property>
+			<property type='yscale'>95</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>9</property>
+			<property type='xpos'>393</property>
+			<property type='ypos'>286</property>
+			<property type='width'>220.05</property>
+			<property type='height'>320.05</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>400</property>
+			<property type='yscale'>400</property>
+		</object>
+	</frame>
+</frames>

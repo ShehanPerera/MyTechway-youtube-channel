@@ -1,0 +1,132 @@
+<?xml version='1.0' ?>
+<frames>
+	<frame>
+		<object type='background' name='bgScene' sort='lib'>
+			<property type='framenumber'>2</property>
+			<property type='xpos'>338</property>
+			<property type='ypos'>264</property>
+			<property type='width'>731.8</property>
+			<property type='height'>493.75</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>100</property>
+			<property type='yscale'>100</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>13</property>
+			<property type='xpos'>195</property>
+			<property type='ypos'>350</property>
+			<property type='width'>174.1</property>
+			<property type='height'>320</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>400</property>
+			<property type='yscale'>400</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/fd.png</property>
+			<property type='xpos'>362</property>
+			<property type='ypos'>182</property>
+			<property type='width'>48.9</property>
+			<property type='height'>57.9</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>15</property>
+			<property type='yscale'>15</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/fd.png</property>
+			<property type='xpos'>258</property>
+			<property type='ypos'>181</property>
+			<property type='width'>32.6</property>
+			<property type='height'>38.6</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>10</property>
+			<property type='yscale'>10</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/ws.png</property>
+			<property type='xpos'>478</property>
+			<property type='ypos'>195</property>
+			<property type='width'>63.6</property>
+			<property type='height'>46.4</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>40</property>
+			<property type='yscale'>40</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/lap.png</property>
+			<property type='xpos'>508</property>
+			<property type='ypos'>225</property>
+			<property type='width'>44.25</property>
+			<property type='height'>43.25</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>5</property>
+			<property type='yscale'>5</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/te.png</property>
+			<property type='xpos'>402</property>
+			<property type='ypos'>223</property>
+			<property type='width'>47.85</property>
+			<property type='height'>38.45</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>5</property>
+			<property type='yscale'>5</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/te.png</property>
+			<property type='xpos'>57</property>
+			<property type='ypos'>230</property>
+			<property type='width'>47.85</property>
+			<property type='height'>38.45</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>5</property>
+			<property type='yscale'>5</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/ws.png</property>
+			<property type='xpos'>370</property>
+			<property type='ypos'>247</property>
+			<property type='width'>79.5</property>
+			<property type='height'>58</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/lap.png</property>
+			<property type='xpos'>73</property>
+			<property type='ypos'>265</property>
+			<property type='width'>44.25</property>
+			<property type='height'>43.25</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>5</property>
+			<property type='yscale'>5</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/fd.png</property>
+			<property type='xpos'>-14</property>
+			<property type='ypos'>248</property>
+			<property type='width'>48.9</property>
+			<property type='height'>57.9</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>15</property>
+			<property type='yscale'>15</property>
+		</object>
+		<object type='bubble' name='bubble_oval' sort='lib'>
+			<property type='framenumber'>23</property>
+			<property type='xpos'>207</property>
+			<property type='ypos'>183</property>
+			<property type='width'>157</property>
+			<property type='height'>124.25</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>100</property>
+			<property type='yscale'>100</property>
+			<property type='text'><![CDATA[Machine Leraning]]></property>
+			<property type='font'>Arial Unicode MS</property>
+			<property type='color'>undefined</property>
+			<property type='bold'>false</property>
+			<property type='italic'>false</property>
+			<property type='underline'>false</property>
+			<property type='size'>14</property>
+		</object>
+	</frame>
+</frames>

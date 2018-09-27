@@ -1,0 +1,171 @@
+<?xml version='1.0' ?>
+<frames>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/029.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>0</property>
+			<property type='width'>206.25</property>
+			<property type='height'>397.5</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>75</property>
+			<property type='yscale'>75</property>
+		</object>
+		<object type='character' name='minor99' sort='lib'>
+			<property type='framenumber'>2</property>
+			<property type='xpos'>105</property>
+			<property type='ypos'>228</property>
+			<property type='width'>164.3</property>
+			<property type='height'>240.55</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>295</property>
+			<property type='yscale'>295</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>-3</property>
+			<property type='ypos'>47</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>-2</property>
+			<property type='ypos'>137</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/029.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>0</property>
+			<property type='width'>206.25</property>
+			<property type='height'>397.5</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>75</property>
+			<property type='yscale'>75</property>
+		</object>
+		<object type='character' name='support3' sort='lib'>
+			<property type='framenumber'>1</property>
+			<property type='xpos'>99</property>
+			<property type='ypos'>211</property>
+			<property type='width'>184.3</property>
+			<property type='height'>270.2</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>340</property>
+			<property type='yscale'>340</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>47</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>139</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/029.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>0</property>
+			<property type='width'>206.25</property>
+			<property type='height'>397.5</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>75</property>
+			<property type='yscale'>75</property>
+		</object>
+		<object type='character' name='support4' sort='lib'>
+			<property type='framenumber'>3</property>
+			<property type='xpos'>105</property>
+			<property type='ypos'>195</property>
+			<property type='width'>165.75</property>
+			<property type='height'>277.1</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>315</property>
+			<property type='yscale'>315</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>49</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>139</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+	</frame>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/029.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>0</property>
+			<property type='width'>206.25</property>
+			<property type='height'>397.5</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>75</property>
+			<property type='yscale'>75</property>
+		</object>
+		<object type='character' name='support1' sort='lib'>
+			<property type='framenumber'>3</property>
+			<property type='xpos'>108</property>
+			<property type='ypos'>214</property>
+			<property type='width'>162.8</property>
+			<property type='height'>275.9</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>345</property>
+			<property type='yscale'>345</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>1</property>
+			<property type='ypos'>49</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+		<object type='picture' name='minor1' sort='lib'>
+			<property type='filePath'>media/foreground/jail-bar-png-5.png</property>
+			<property type='xpos'>0</property>
+			<property type='ypos'>139</property>
+			<property type='width'>210</property>
+			<property type='height'>210</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>50</property>
+			<property type='yscale'>50</property>
+		</object>
+	</frame>
+</frames>

@@ -1,0 +1,42 @@
+<?xml version='1.0' ?>
+<frames>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/IMG20180805182518.jpg</property>
+			<property type='xpos'>697</property>
+			<property type='ypos'>406</property>
+			<property type='width'>665</property>
+			<property type='height'>498.75</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>-95</property>
+			<property type='yscale'>-95</property>
+		</object>
+		<object type='bubble' name='bubble_rec' sort='lib'>
+			<property type='framenumber'>12</property>
+			<property type='xpos'>97</property>
+			<property type='ypos'>66</property>
+			<property type='width'>199.25</property>
+			<property type='height'>124</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>100</property>
+			<property type='yscale'>100</property>
+			<property type='text'><![CDATA[Welcome to Shaggy Comics by MyTechway]]></property>
+			<property type='font'>Arial Unicode MS</property>
+			<property type='color'>undefined</property>
+			<property type='bold'>false</property>
+			<property type='italic'>false</property>
+			<property type='underline'>false</property>
+			<property type='size'>16</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>13</property>
+			<property type='xpos'>63</property>
+			<property type='ypos'>250</property>
+			<property type='width'>174.1</property>
+			<property type='height'>320</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>400</property>
+			<property type='yscale'>400</property>
+		</object>
+	</frame>
+</frames>

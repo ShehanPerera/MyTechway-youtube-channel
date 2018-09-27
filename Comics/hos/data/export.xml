@@ -1,0 +1,35 @@
+<?xml version='1.0' ?>
+<frames>
+	<frame>
+		<object type='background' name='minor2' sort='lib'>
+			<property type='filePath'>media/background/z_hospital_room_bed_corner_window_by_galefeather-d9nm1eh.png</property>
+			<property type='xpos'>-1</property>
+			<property type='ypos'>-2</property>
+			<property type='width'>696.3</property>
+			<property type='height'>464.45</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>68</property>
+			<property type='yscale'>68</property>
+		</object>
+		<object type='character' name='main1' sort='lib'>
+			<property type='framenumber'>2</property>
+			<property type='xpos'>127</property>
+			<property type='ypos'>205</property>
+			<property type='width'>181.45</property>
+			<property type='height'>229.15</property>
+			<property type='rotation'>-20</property>
+			<property type='xscale'>250</property>
+			<property type='yscale'>250</property>
+		</object>
+		<object type='character' name='minor99' sort='lib'>
+			<property type='framenumber'>1</property>
+			<property type='xpos'>670</property>
+			<property type='ypos'>171</property>
+			<property type='width'>198.3</property>
+			<property type='height'>322.6</property>
+			<property type='rotation'>0</property>
+			<property type='xscale'>-385</property>
+			<property type='yscale'>385</property>
+		</object>
+	</frame>
+</frames>
